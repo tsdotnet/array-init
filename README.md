@@ -4,4 +4,4 @@
 ![npm-publish](https://github.com/tsdotnet/array-init/workflows/npm-publish/badge.svg)
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/array-init.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/array-init)
 
-Commonly used array initialization that validates and optimizes for length.
+Commonly used array initialization that optimizes for length.
