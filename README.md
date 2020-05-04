@@ -7,4 +7,5 @@
 Commonly used array initializer that optimizes for length.
 
 ## Docs
+
 [tsdotnet.github.io/array-init](https://tsdotnet.github.io/array-init/)
