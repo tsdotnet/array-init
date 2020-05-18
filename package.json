@@ -1,6 +1,6 @@
 {
   "name": "@tsdotnet/array-init",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Commonly used array initializer that optimizes for length.",
   "author": "electricessence",
   "license": "MIT",
