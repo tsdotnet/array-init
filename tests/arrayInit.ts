@@ -1,8 +1,9 @@
+import {expect} from 'chai';
 import arrayInit from '../src/arrayInit';
 
 function validate (length: number): void
 {
-	expect(arrayInit<any>(length).length).toBe(length);
+	expect(arrayInit<any>(length).length).equal(length);
 }
 
 describe('arrayInit', () => {
