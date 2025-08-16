@@ -4,6 +4,7 @@
  * Licensing: MIT
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = arrayInit;
 /**
  * Initializes an array depending on the requested capacity.
  * The returned array will have a .length equal to the value provided.
@@ -21,5 +22,4 @@ function arrayInit(length) {
     }
     return array;
 }
-exports.default = arrayInit;
 //# sourceMappingURL=arrayInit.js.map
