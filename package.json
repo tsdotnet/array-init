@@ -8,8 +8,11 @@
   "main": "dist/arrayInit.js",
   "module": "dist/arrayInit.mjs",
   "exports": {
-    "import": "./dist/arrayInit.mjs",
-    "require": "./dist/arrayInit.js"
+    ".": {
+      "import": "./dist/arrayInit.mjs",
+      "require": "./dist/arrayInit.js",
+      "types": "./dist/arrayInit.d.ts"
+    }
   },
   "keywords": [
     "array",
