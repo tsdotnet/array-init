@@ -6,9 +6,9 @@
   "license": "MIT",
   "types": "dist/arrayInit.d.ts",
   "main": "dist/arrayInit.js",
-  "module": "dist-esm/arrayInit.mjs",
+  "module": "dist/arrayInit.mjs",
   "exports": {
-    "import": "./dist-esm/arrayInit.mjs",
+    "import": "./dist/arrayInit.mjs",
     "require": "./dist/arrayInit.js"
   },
   "keywords": [
@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build:cjs": "rimraf dist && tsc && copyfiles -u 1 src/**/*.d.ts dist",
-    "build:esm": "rimraf dist-esm && tsc -p tsconfig.esm.json && node -e \"const fs=require('fs'),path=require('path'),dir='dist-esm';fs.readdirSync(dir).forEach(file=>{if(path.extname(file)==='.js'){const old=path.join(dir,file),newer=path.join(dir,file.replace('.js','.mjs'));fs.renameSync(old,newer)}})\"",
+    "build:esm": "rimraf temp-esm && tsc -p tsconfig.esm.json --outDir temp-esm && node -e \"require('fs').readdirSync('temp-esm').forEach(f=>{if(f.endsWith('.js')){require('fs').copyFileSync('temp-esm/'+f,'dist/'+f.replace('.js','.mjs'));} if(f.endsWith('.js.map')){require('fs').copyFileSync('temp-esm/'+f,'dist/'+f.replace('.js.map','.mjs.map'));}})\" && rimraf temp-esm",
     "build": "concurrently pnpm:build:cjs pnpm:build:esm",
     "docs": "rimraf docs && typedoc --options typedoc.json --readme none",
     "lint": "eslint src/**/*.ts",
