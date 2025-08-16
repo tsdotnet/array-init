@@ -25,6 +25,7 @@
     "build:cjs": "rimraf dist && tsc && copyfiles -u 1 src/**/*.d.ts dist",
     "build:esm": "rimraf temp-esm && tsc -p tsconfig.esm.json --outDir temp-esm && node -e \"require('fs').readdirSync('temp-esm').forEach(f=>{if(f.endsWith('.js')){require('fs').copyFileSync('temp-esm/'+f,'dist/'+f.replace('.js','.mjs'));} if(f.endsWith('.js.map')){require('fs').copyFileSync('temp-esm/'+f,'dist/'+f.replace('.js.map','.mjs.map'));}})\" && rimraf temp-esm",
     "build": "concurrently pnpm:build:cjs pnpm:build:esm",
+    "bump": "pnpm precommit && npm version patch",
     "docs": "rimraf docs && typedoc --options typedoc.json --readme none",
     "lint": "eslint src/**/*.ts",
     "precommit": "concurrently pnpm:lint pnpm:test && pnpm run build && pnpm run validate && git status -s",
