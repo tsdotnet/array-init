@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import { describe, it, expect } from 'vitest';
 import arrayInit from '../src/arrayInit';
 
 function validate (length: number): void
