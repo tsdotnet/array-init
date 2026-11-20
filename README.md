@@ -1,4 +1,4 @@
-<a href="https://tsdotnet.github.io/array-init/"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/array-init@master/assets/banner.svg" alt="@tsdotnet/array-init: Pre-size arrays. A fixed length, ready to fill."></a>
+<a name="banner"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/array-init@master/assets/banner.svg" alt="@tsdotnet/array-init: Pre-size arrays. A fixed length, ready to fill."></a>
 
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/array-init.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/array-init)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tsdotnet/array-init/blob/master/LICENSE)
